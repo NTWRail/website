@@ -1,39 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>PixelCraft | AI Web &amp; Project Development</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="robots" content="index,follow"/>
-  <meta name="generator" content="GrapesJS Studio"/>
-  <style data-project-fonts="true">
+<head>
+<title>PixelCraft | AI Web & Project Development</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="index,follow"/>
+<meta name="generator" content="GrapesJS Studio"/>
+
+<style data-project-fonts="true">
 @font-face {
-      font-family: Figtree;
-      src: url('https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMq4a3DIZs3ik.woff2');
-      font-weight: 300 900;
-    }
-  
+  font-family: Figtree;
+  src: url('https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMq4a3DIZs3ik.woff2');
+  font-weight: 300 900;
+}
 
-    @font-face {
-      font-family: Figtree;
-      src: url('https://fonts.gstatic.com/s/figtree/v9/_Xmu-HUzqDCFdgfMm4G9DaRpzimMsg.woff2');
-      font-style: italic;
-font-weight: 300 900;
-    }
-  
+@font-face {
+  font-family: Figtree;
+  src: url('https://fonts.gstatic.com/s/figtree/v9/_Xmu-HUzqDCFdgfMm4G9DaRpzimMsg.woff2');
+  font-style: italic;
+  font-weight: 300 900;
+}
 
-    @font-face {
-      font-family: 'Space Grotesk';
-      src: url('https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mDbNyCts0DqQ.woff2');
-      font-weight: 300 700;
-    }
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mDbNyCts0DqQ.woff2');
+  font-weight: 300 700;
+}
+
+/* ===== Bildschutz CSS ===== */
+
+.image-protect {
+  position: relative;
+  display: inline-block;
+}
+
+.image-protect img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
-  <link rel="stylesheet" href="./style.css">
-  </head>
-  <body id="ibody" class="gjs-t-body"><section id="inav" class="gjs-section"><div id="inavcnt" class="gjs-container"><div id="ivc9hd" class="navbar"><div data-gjs="navbar" id="inv46c" class="navbar-cnt"><a href="/" class="navbar-brand" id="i5oo8"><h1 id="ilogo"><b></b></h1></a><div id="immgsu" class="navbar-menu-toggle"><div data-type-icon="" id="i7qvcq" class="gjs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></div></div><div data-gjs="navbar-items" class="navbar-items-c" id="i20pv"><nav id="i7lpe" class="navbar-menu-nav"></nav></div></div></div><img alt="NTW Rail HQ komprimiert.png" src="https://cdn.grapesjs.com/workspaces/cmll230uucpowg8fwgwje1elk/assets/ddb08417-00c7-43d3-828a-0a8d2935e3ce__ntw-rail-hq-komprimiert.png" id="inr8mc"/></div></section><section id="icta" class="gjs-section"><div id="ictacnt" class="gjs-container"><div data-type-role="flex-row" id="ictarow" class="gjs-plg-flex-row"><div data-type-role="flex-column" id="ictacol" class="gjs-plg-flex-column"><h2 id="ictatitle">Diese Webseite befindet sich derzeit im Aufbau.</h2></div></div></div></section><script>var items = document.querySelectorAll('#immgsu');
-          for (var i = 0, len = items.length; i < len; i++) {
-            (function(){
-var n,t=this,e='gjs-collapse',a='max-height',o=0,i=function(){var n=document.createElement('void'),t={transition:'transitionend',OTransition:'oTransitionEnd',MozTransition:'transitionend',WebkitTransition:'webkitTransitionEnd'};for(var e in t)if(void 0!==n.style[e])return t[e]}(),r=function(n){o=1;var t=function(n){var t=window.getComputedStyle(n),e=t.display,o=parseInt(t[a]);if('none'!==e&&0!==o)return n.offsetHeight;n.style.height='auto',n.style.display='block',n.style.position='absolute',n.style.visibility='hidden';var i=n.offsetHeight;return n.style.height='',n.style.display='',n.style.position='',n.style.visibility='',i}(n),e=n.style;e.display='block',e.transition="".concat(a," 0.25s ease-in-out"),e.overflowY='hidden',''==e[a]&&(e[a]=0),0==parseInt(e[a])?(e[a]='0',setTimeout((function(){e[a]=t+'px'}),10)):e[a]='0'};e in t||t.addEventListener('click',(function(e){if(e.preventDefault(),!o){var l=t.closest("[data-gjs=navbar]"),c=null==l?void 0:l.querySelector("[data-gjs=navbar-items]");c&&r(c),n||(null==c||c.addEventListener(i,(function(){o=0;var n=c.style;0==parseInt(n[a])&&(n.display='',n[a]='')})),n=1)}})),t[e]=1
+
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="ibody" class="gjs-t-body">
+
+<section id="inav" class="gjs-section">
+<div id="inavcnt" class="gjs-container">
+
+<div id="ivc9hd" class="navbar">
+<div data-gjs="navbar" id="inv46c" class="navbar-cnt">
+<a href="/" class="navbar-brand" id="i5oo8">
+<h1 id="ilogo"><b></b></h1>
+</a>
+
+<div id="immgsu" class="navbar-menu-toggle">
+<div data-type-icon="" id="i7qvcq" class="gjs-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path>
+</svg>
+</div>
+</div>
+
+<div data-gjs="navbar-items" class="navbar-items-c" id="i20pv">
+<nav id="i7lpe" class="navbar-menu-nav"></nav>
+</div>
+</div>
+</div>
+
+<!-- ===== Geschütztes Bild ===== -->
+<div class="image-protect">
+<img 
+alt="NTW Rail HQ komprimiert.png"
+src="https://cdn.grapesjs.com/workspaces/cmll230uucpowg8fwgwje1elk/assets/ddb08417-00c7-43d3-828a-0a8d2935e3ce__ntw-rail-hq-komprimiert.png"
+id="inr8mc"
+draggable="false"
+/>
+<div class="image-overlay"></div>
+</div>
+
+</div>
+</section>
+
+<section id="icta" class="gjs-section">
+<div id="ictacnt" class="gjs-container">
+<div data-type-role="flex-row" id="ictarow" class="gjs-plg-flex-row">
+<div data-type-role="flex-column" id="ictacol" class="gjs-plg-flex-column">
+<h2 id="ictatitle">Diese Webseite befindet sich derzeit im Aufbau.</h2>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== Navbar Script ===== -->
+<script>
+var items = document.querySelectorAll('#immgsu');
+for (var i = 0, len = items.length; i < len; i++) {
+(function(){
+var n,t=this,e='gjs-collapse',a='max-height',o=0,i=function(){
+var n=document.createElement('void'),
+t={transition:'transitionend',OTransition:'oTransitionEnd',MozTransition:'transitionend',WebkitTransition:'webkitTransitionEnd'};
+for(var e in t) if(void 0!==n.style[e]) return t[e]
+}(),
+r=function(n){
+o=1;
+var t=function(n){
+var t=window.getComputedStyle(n),
+e=t.display,o=parseInt(t[a]);
+if('none'!==e&&0!==o) return n.offsetHeight;
+n.style.height='auto';
+n.style.display='block';
+n.style.position='absolute';
+n.style.visibility='hidden';
+var i=n.offsetHeight;
+n.style.height='';
+n.style.display='';
+n.style.position='';
+n.style.visibility='';
+return i
+}(n),
+e=n.style;
+e.display='block';
+e.transition=a+" 0.25s ease-in-out";
+e.overflowY='hidden';
+''==e[a]&&(e[a]=0);
+0==parseInt(e[a])?(e[a]='0',setTimeout(function(){e[a]=t+'px'},10)):e[a]='0'
+};
+e in t||t.addEventListener('click',function(e){
+if(e.preventDefault(),!o){
+var l=t.closest("[data-gjs=navbar]"),
+c=l?l.querySelector("[data-gjs=navbar-items]"):null;
+c&&r(c);
+n||(c&&c.addEventListener(i,function(){
+o=0;
+var n=c.style;
+0==parseInt(n[a])&&(n.display='',n[a]='')
+}),n=1)
+}
+}),
+t[e]=1
 }.bind(items[i]))();
-          }</script></body>
+}
+</script>
+
+<!-- ===== Schutz Script ===== -->
+<script>
+// Rechtsklick blockieren
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Drag verhindern
+document.addEventListener("dragstart", e => e.preventDefault());
+
+// Text markieren verhindern
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// Tastenkombinationen blockieren
+document.addEventListener("keydown", function(e){
+if(e.ctrlKey && ["s","u","c","x","a"].includes(e.key)){
+e.preventDefault();
+}
+});
+</script>
+
+</body>
 </html>
