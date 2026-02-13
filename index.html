@@ -9,19 +9,21 @@
 
 <style>
 
-/* ===== Responsive Bild als Hintergrund (Profi-Schutz) ===== */
+/* ===== Profi-Kopierschutz: Bild vollständig sichtbar & responsive ===== */
 .secure-image {
   position: relative;
-  width: 100%;              /* Dynamisch an Breite des Containers */
-  max-width: 800px;         /* Maximalbreite für große Bildschirme */
-  margin: 20px auto;        /* Zentriert */
-  aspect-ratio: 16 / 9;     /* Höhe proportional zur Breite */
+  width: 100%;               /* Dynamisch an Container */
+  max-width: 800px;          /* Maximalbreite */
+  margin: 20px auto;         /* Zentriert */
+  height: auto;
   background-image: url("https://cdn.grapesjs.com/workspaces/cmll230uucpowg8fwgwje1elk/assets/ddb08417-00c7-43d3-828a-0a8d2935e3ce__ntw-rail-hq-komprimiert.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;       /* optional abgerundete Ecken */
+  background-size: contain;   /* Vollständig sichtbar, nicht beschnitten */
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 8px;
   user-select: none;
   overflow: hidden;
+  padding-top: 56.25%;       /* 16:9 Verhältnis */
 }
 
 /* Overlay blockiert Klicks und Rechtsklick */
@@ -42,7 +44,7 @@
   pointer-events: none;
 }
 
-/* Optional: Responsive Text */
+/* Optional: Text */
 h2 {
   text-align: center;
   margin-top: 30px;
@@ -57,15 +59,10 @@ h2 {
 
 <section>
 
-<!-- ===== Dynamisches Bild mit Overlay & Wasserzeichen ===== -->
+<!-- ===== Geschütztes Bild, vollständig sichtbar ===== -->
 <div class="secure-image">
-
   <div class="secure-overlay"></div>
-
-  <div class="watermark">
-    PixelCraft
-  </div>
-
+  <div class="watermark">PixelCraft</div>
 </div>
 
 </section>
