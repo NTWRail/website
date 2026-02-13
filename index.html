@@ -9,16 +9,19 @@
 
 <style>
 
-/* ===== Bild wird als Hintergrund geladen (Profi Trick) ===== */
-
+/* ===== Bild als Hintergrund laden (Profi-Schutz) ===== */
 .secure-image {
   position: relative;
-  width: 100%;
-  height: 450px;
+  width: 80%;               /* Bild kleiner als volle Breite */
+  max-width: 600px;         /* maximale Breite */
+  margin: 20px auto;        /* zentriert */
+  aspect-ratio: 16 / 9;     /* Höhe proportional zur Breite */
   background-image: url("https://cdn.grapesjs.com/workspaces/cmll230uucpowg8fwgwje1elk/assets/ddb08417-00c7-43d3-828a-0a8d2935e3ce__ntw-rail-hq-komprimiert.png");
   background-size: cover;
   background-position: center;
+  border-radius: 8px;       /* optional abgerundete Ecken */
   user-select: none;
+  overflow: hidden;
 }
 
 /* Overlay blockiert Klicks */
@@ -31,10 +34,10 @@
 /* Optional Wasserzeichen */
 .watermark {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   color: rgba(255,255,255,0.6);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   pointer-events: none;
 }
@@ -49,24 +52,21 @@
 
 <div class="secure-image">
 
-<div class="secure-overlay"></div>
+  <div class="secure-overlay"></div>
 
-<div class="watermark">
-PixelCraft
-</div>
+  <div class="watermark">
+    PixelCraft
+  </div>
 
 </div>
 
 </section>
 
-
-<h2 style="text-align:center;">
+<h2 style="text-align:center; margin-top: 30px;">
 Diese Webseite befindet sich derzeit im Aufbau.
 </h2>
 
-
 <!-- ===== Profi Schutz Script ===== -->
-
 <script>
 
 // Rechtsklick blockieren
@@ -81,15 +81,15 @@ document.addEventListener("selectstart", e => e.preventDefault());
 // Hotkeys blockieren
 document.addEventListener("keydown", function(e) {
 
-if (e.ctrlKey && ["s","u","c","x","a"].includes(e.key.toLowerCase())) {
-  e.preventDefault();
-}
+  if (e.ctrlKey && ["s","u","c","x","a"].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+  }
 
-// Screenshot Hotkey Versuch (nicht 100% blockierbar)
-if (e.key === "PrintScreen") {
-  navigator.clipboard.writeText("");
-  alert("Screenshots sind nicht erlaubt");
-}
+  // Screenshot Hotkey Versuch (nicht 100% blockierbar)
+  if (e.key === "PrintScreen") {
+    navigator.clipboard.writeText("");
+    alert("Screenshots sind nicht erlaubt");
+  }
 
 });
 
