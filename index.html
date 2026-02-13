@@ -9,12 +9,12 @@
 
 <style>
 
-/* ===== Bild als Hintergrund laden (Profi-Schutz) ===== */
+/* ===== Responsive Bild als Hintergrund (Profi-Schutz) ===== */
 .secure-image {
   position: relative;
-  width: 80%;               /* Bild kleiner als volle Breite */
-  max-width: 600px;         /* maximale Breite */
-  margin: 20px auto;        /* zentriert */
+  width: 100%;              /* Dynamisch an Breite des Containers */
+  max-width: 800px;         /* Maximalbreite für große Bildschirme */
+  margin: 20px auto;        /* Zentriert */
   aspect-ratio: 16 / 9;     /* Höhe proportional zur Breite */
   background-image: url("https://cdn.grapesjs.com/workspaces/cmll230uucpowg8fwgwje1elk/assets/ddb08417-00c7-43d3-828a-0a8d2935e3ce__ntw-rail-hq-komprimiert.png");
   background-size: cover;
@@ -24,22 +24,29 @@
   overflow: hidden;
 }
 
-/* Overlay blockiert Klicks */
+/* Overlay blockiert Klicks und Rechtsklick */
 .secure-overlay {
   position: absolute;
   inset: 0;
   z-index: 10;
 }
 
-/* Optional Wasserzeichen */
+/* Wasserzeichen */
 .watermark {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.5);
   font-size: 14px;
   font-weight: bold;
   pointer-events: none;
+}
+
+/* Optional: Responsive Text */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.5rem;
 }
 
 </style>
@@ -50,6 +57,7 @@
 
 <section>
 
+<!-- ===== Dynamisches Bild mit Overlay & Wasserzeichen ===== -->
 <div class="secure-image">
 
   <div class="secure-overlay"></div>
@@ -62,7 +70,7 @@
 
 </section>
 
-<h2 style="text-align:center; margin-top: 30px;">
+<h2>
 Diese Webseite befindet sich derzeit im Aufbau.
 </h2>
 
@@ -78,19 +86,17 @@ document.addEventListener("dragstart", e => e.preventDefault());
 // Text markieren verhindern
 document.addEventListener("selectstart", e => e.preventDefault());
 
-// Hotkeys blockieren
+// Hotkeys blockieren (Strg+S, Strg+U etc.)
 document.addEventListener("keydown", function(e) {
-
   if (e.ctrlKey && ["s","u","c","x","a"].includes(e.key.toLowerCase())) {
     e.preventDefault();
   }
 
-  // Screenshot Hotkey Versuch (nicht 100% blockierbar)
+  // PrintScreen blockieren (nicht 100% sicher)
   if (e.key === "PrintScreen") {
     navigator.clipboard.writeText("");
     alert("Screenshots sind nicht erlaubt");
   }
-
 });
 
 </script>
