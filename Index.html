@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NTW Rail | Exzellenz in der Eisenbahnlogistik</title>
+    <meta name="description" content="NTW Rail – Ihr strategischer Partner für qualifiziertes Eisenbahnfachpersonal. Triebfahrzeugführer, Wagenmeister und Rangierbegleiter.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Design-Vorgabe: Stark transparente Überlagerung für den Hero-Bereich */
+        .hero-gradient { background: linear-gradient(rgba(10, 36, 66, 0.4), rgba(10, 36, 66, 0.6)); } 
+        
+        /* Design-Vorgabe: Hintergrund-Klasse für die Sektionen mit Schienen-Bild */
+        .bg-shared-tracks {
+            background-image: url('https://images.pexels.com/photos/724712/pexels-photo-724712.jpeg?cs=srgb&dl=pexels-iriser-724712.jpg&fm=jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="NTW%20Rail%20Logo.png" alt="NTW Rail Logo" class="h-12 w-auto"> 
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium text-slate-700">
+                    <a href="#about" class="hover:text-[#1E88E5] transition-colors">Über uns</a>
+                    <a href="#services" class="hover:text-[#1E88E5] transition-colors">Leistungen</a>
+                    <a href="#career" class="hover:text-[#1E88E5] transition-colors">Karriere</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1598918231267-3c58223f669e?q=80&w=2670" 
+                 class="w-full h-full object-cover" alt="Eisenbahn Logistik">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-1 rounded-full bg-[#1E88E5]/30 text-white font-semibold text-sm mb-6 border border-[#1E88E5]/50 backdrop-blur-sm">
+                    Deutschlandweit im Einsatz
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
+                    Präzision auf <br><span class="text-[#E0E0E0]">ganzer Strecke.</span> 
+                </h1>
+                <p class="text-xl text-white mb-10 leading-relaxed drop-shadow-md">
+                    NTW Rail - Ihr spezialisierter Partner für qualifiziertes Eisenbahnfachpersonal.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-[#1E88E5] hover:bg-[#1976D2] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-[#1E88E5]/20">
+                        Mehr von uns
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="relative py-24 bg-shared-tracks">
+        <div class="absolute inset-0 bg-white/85 backdrop-blur-[2px] z-0"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="bg-white/40 p-8 rounded-3xl border border-white/50 shadow-sm">
+                    <h2 class="text-sm font-bold text-[#1E88E5] uppercase tracking-widest mb-4">Über NTW Rail</h2>
+                    <h3 class="text-4xl font-bold mb-8 leading-snug text-[#0A2442]">Präzision auf der Schiene – Vertrauen in der Partnerschaft.</h3>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        In einer Branche, in der jede Sekunde und jeder Millimeter zählt, setzen wir auf kompromisslose Qualität. NTW Rail unterstützt Eisenbahnverkehrsunternehmen dabei, personelle Engpässe nicht nur zu überbrücken, sondern die Effizienz des operativen Betriebs nachhaltig zu steigern.
+                    </p>
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        Unser Fokus liegt auf absoluter Sicherheit und tiefgreifender Fachkenntnis. Wir sind der integrale Bestandteil Ihrer logistischen Erfolgskette.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/90 p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
+                        <div class="text-[#1E88E5] font-bold text-3xl mb-2">100%</div>
+                        <div class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Zuverlässigkeit</div>
+                    </div>
+                    <div class="bg-[#0A2442] p-8 rounded-2xl text-white text-center shadow-xl">
+                        <div class="text-[#E0E0E0] font-bold text-3xl mb-2">24/7</div>
+                        <div class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Einsatzbereitschaft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="relative py-24 bg-shared-tracks">
+        <div class="absolute inset-0 bg-white/85 backdrop-blur-[2px] z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl font-bold mb-6 text-[#0A2442]">Unsere Kernkompetenzen</h2>
+                <p class="text-slate-800 text-lg font-medium">Maßgeschneiderte Personallösungen für den modernen Schienenverkehr.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/90 p-10 rounded-3xl shadow-lg border border-white hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-[#1E88E5]/10 text-[#1E88E5] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#1E88E5] group-hover:text-white transition-colors">
+                        <i data-lucide="user-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-[#0A2442]">Triebfahrzeugführer</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Erfahrene Lokführer für den Güterverkehr. Höchste Expertise in diversen Baureihen und umfassende Streckenkenntnisse.
+                    </p>
+                </div>
+
+                <div class="bg-white/90 p-10 rounded-3xl shadow-lg border border-white hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-[#1E88E5]/10 text-[#1E88E5] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#1E88E5] group-hover:text-white transition-colors">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-[#0A2442]">Wagenmeister</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Präzision bei jeder Prüfung. Unsere Wagenmeister gewähren durch technische Kontrollen die Betriebssicherheit Ihrer Züge.
+                    </p>
+                </div>
+
+                <div class="bg-white/90 p-10 rounded-3xl shadow-lg border border-white hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-[#1E88E5]/10 text-[#1E88E5] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#1E88E5] group-hover:text-white transition-colors">
+                        <i data-lucide="move-horizontal"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-[#0A2442]">Rangierbegleiter</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Sicheres Rangieren und fachgerechte Zugbildung. Wir stellen qualifiziertes Personal für die Last-Mile-Logistik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="career" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-[#0A2442] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl">
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Werden Sie Teil der NTW Rail</h2>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                            Wir suchen Profis auf der Schiene. Bei uns erwarten Sie erstklassige Konditionen und ein Team, das Ihre Arbeit schätzt.
+                        </p>
+                        <div class="space-y-4 font-medium">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="text-[#1E88E5]"></i>
+                                <span>Attraktive Vergütung & Zulagen</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="text-[#1E88E5]"></i>
+                                <span>Maximale Flexibilität </span>
+                           </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="text-[#1E88E5]"></i>
+                                <span>Moderner Fuhrpark</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <a href="mailto:dispo@ntw-rail.de" class="inline-block bg-white text-[#0A2442] px-10 py-4 rounded-xl font-bold hover:bg-[#1E88E5] hover:text-white transition-all">
+                            Jetzt bewerben
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-100 border-t border-slate-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center">
+                <img src="NTW%20Rail%20Logo.png" alt="NTW Rail Logo" class="h-10 w-auto">
+            </div>
+            <div class="flex gap-8 text-sm font-medium text-slate-600 my-6 md:my-0">
+                <a href="impressum.html" class="hover:text-[#1E88E5]">Impressum</a>
+                <a href="Datenschutz.html" class="hover:text-[#1E88E5]">Datenschutz</a>
+            </div>
+            <p class="text-slate-400 text-sm">© 2026 NTW Rail GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
